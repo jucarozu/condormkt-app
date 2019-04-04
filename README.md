@@ -11,8 +11,9 @@ A little web app for create your own MarketPlace (like Amazon) - App client.
 
 ### Option 1: Local environment
 
-1. npm install
-2. npm start
+1. In src/config.js file, replace value of const API_SERVER by 'http://localhost:5000/'
+2. npm install
+3. npm start
 
 * Default port: 3000
 
