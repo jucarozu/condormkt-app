@@ -5,7 +5,7 @@
 import axios from 'axios';
 import * as R from 'ramda';
 
-const API_SERVER = process.env.API_SERVER;
+import { API_SERVER } from '../config';
 
 // Action: getCart
 // Description: Get cart from CondorMKT API.

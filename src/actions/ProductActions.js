@@ -4,7 +4,7 @@
 
 import axios from 'axios';
 
-const API_SERVER = process.env.API_SERVER;
+import { API_SERVER } from '../config';
 
 // Action: getProducts
 // Description: Get all products from CondorMKT API.
@@ -19,7 +19,7 @@ export const getProducts = () => async dispatch => {
     .catch(error => {
       dispatch({
         type: "GET_PRODUCTS_ERROR",
-        payload: error.response.data
+        payload: error
       });
     });
 };
@@ -37,7 +37,7 @@ export const getProductById = id => async dispatch => {
     .catch(error => {
       dispatch({
         type: "GET_PRODUCT_BY_ID_ERROR",
-        payload: error.response.data
+        payload: error
       });
     });
 };
