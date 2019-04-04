@@ -9,7 +9,7 @@ const API_SERVER = process.env.API_SERVER;
 // Action: getProducts
 // Description: Get all products from CondorMKT API.
 export const getProducts = () => async dispatch => {
-  axios.get(`${SERVER_API}/api/products`)
+  axios.get(`${API_SERVER}/api/products`)
     .then(response => {
       dispatch({
         type: "GET_PRODUCTS",
@@ -27,7 +27,7 @@ export const getProducts = () => async dispatch => {
 // Action: getProductById
 // Description: Get a product by id from CondorMKT API.
 export const getProductById = id => async dispatch => {
-  axios.get(`${SERVER_API}/api/products/${id}`)
+  axios.get(`${API_SERVER}/api/products/${id}`)
     .then(response => {
       dispatch({
         type: "GET_PRODUCT_BY_ID",
