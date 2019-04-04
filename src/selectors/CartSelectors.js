@@ -32,7 +32,7 @@ export const calculateTotals = state => {
     R.add,
     0,
     R.map(
-      (item) => item.quantity,
+      item => item.quantity,
       cart
     )
   );
@@ -42,7 +42,7 @@ export const calculateTotals = state => {
     R.add,
     0,
     R.map(
-      (item) => item.product.price * item.quantity,
+      item => item.product.price * item.quantity,
       cart
     )
   );

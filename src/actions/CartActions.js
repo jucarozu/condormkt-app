@@ -43,7 +43,7 @@ export const addProductToCart = cart => async dispatch => {
 
 // Action: updateCart
 // Description: Update data of one product of the cart.
-export const updateCart = (_id, unit, cartUpdate) => {
+export const updateCart = (_id, unit, cartUpdate) => async dispatch => {
   // Determine index of product to update.
   const indexToUpdate = cartUpdate.findIndex(item => {
     return item.product._id === _id;
@@ -52,21 +52,19 @@ export const updateCart = (_id, unit, cartUpdate) => {
   // Update product quantity to specified index in the cart.
   cartUpdate[indexToUpdate].quantity = cartUpdate[indexToUpdate].quantity + unit;
 
-  return dispatch => {
-    axios.post("/api/cart", cartUpdate)
-      .then(response => {
-        dispatch({
-          type: "UPDATE_CART",
-          payload: response.data.cart
-        });
-      })
-      .catch(error => {
-        dispatch({
-          type: "UPDATE_CART_ERROR",
-          payload: error.message
-        });
+  axios.post("/api/cart", cartUpdate)
+    .then(response => {
+      dispatch({
+        type: "UPDATE_CART",
+        payload: response.data.cart
       });
-  };
+    })
+    .catch(error => {
+      dispatch({
+        type: "UPDATE_CART_ERROR",
+        payload: error.message
+      });
+    });
 };
 
 // Action: removeProductFromCart
