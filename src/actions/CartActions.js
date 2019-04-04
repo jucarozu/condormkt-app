@@ -28,7 +28,7 @@ export const getCart = () => async dispatch => {
 // Action: addProductToCart
 // Description: Add an item to the cart.
 export const addProductToCart = cart => async dispatch => {
-  axios.post(`${API_SERVER}/api/cart`, cart)
+  axios.post(`${API_SERVER}api/cart`, cart)
     .then(response => {
       dispatch({
         type: "ADD_PRODUCT_TO_CART",
@@ -54,7 +54,7 @@ export const updateCart = (_id, unit, cartUpdate) => async dispatch => {
   // Update product quantity to specified index in the cart.
   cartUpdate[indexToUpdate].quantity = cartUpdate[indexToUpdate].quantity + unit;
 
-  axios.post(`${API_SERVER}/api/cart`, cartUpdate)
+  axios.post(`${API_SERVER}api/cart`, cartUpdate)
     .then(response => {
       dispatch({
         type: "UPDATE_CART",
@@ -80,7 +80,7 @@ export const removeProductFromCart = (_id, cartRemove) => async dispatch => {
   // Remove specified product of the cart.
   cartRemove = R.remove(indexToRemove, 1, cartRemove);
 
-  axios.post(`${API_SERVER}/api/cart`, cartRemove)
+  axios.post(`${API_SERVER}api/cart`, cartRemove)
     .then(response => {
       dispatch({
         type: "REMOVE_PRODUCT_FROM_CART",
@@ -98,7 +98,7 @@ export const removeProductFromCart = (_id, cartRemove) => async dispatch => {
 // Action: cleanCart
 // Description: Returns the cart to the initial state.
 export const cleanCart = () => async dispatch => {
-  axios.post(`${API_SERVER}/api/cart`, [])
+  axios.post(`${API_SERVER}api/cart`, [])
     .then(response => {
       dispatch({
         type: "CLEAN_CART"

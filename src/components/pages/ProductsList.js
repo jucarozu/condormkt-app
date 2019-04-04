@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import { API_SERVER } from '../config';
+
 // Actions
 import { getProducts } from '../../actions/ProductActions';
 
@@ -27,7 +29,7 @@ class ProductsList extends Component {
         <div className="thumbnail">
           <Link to={`/products/${product._id}`}>
             <img className='img-thumbnail'
-              src={product.photo}
+              src={API_SERVER + product.photo}
               alt={product.name}
             />
           </Link>

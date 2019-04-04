@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-// Selectors
-import { showTotalCartQuantity } from '../selectors/CartSelectors';
-
 // Actions
 import { getCart } from '../actions/CartActions';
+
+// Selectors
+import { showTotalCartQuantity } from '../selectors/CartSelectors';
 
 class CartWidget extends Component {
 

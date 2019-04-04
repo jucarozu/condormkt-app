@@ -6,11 +6,11 @@ import * as R from 'ramda';
 import { toast, Flip } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// Selectors
-import { showCart } from '../selectors/CartSelectors';
-
 // Actions
 import { addProductToCart, updateCart } from '../actions/CartActions';
+
+// Selectors
+import { showCart } from '../selectors/CartSelectors';
 
 class AddToCartButton extends Component {
 

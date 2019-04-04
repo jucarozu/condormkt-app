@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 
 import * as R from 'ramda';
 
-// Selectors
-import { showCart, showTotalCartAmount } from '../../selectors/CartSelectors';
-
 // Actions
 import { updateCart, removeProductFromCart, cleanCart } from '../../actions/CartActions';
+
+// Selectors
+import { showCart, showTotalCartAmount } from '../../selectors/CartSelectors';
 
 class Cart extends Component {
   

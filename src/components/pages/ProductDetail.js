@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import { API_SERVER } from '../config';
+
 // Actions
 import { getProductById } from '../../actions/ProductActions';
 import { addProductToCart } from '../../actions/CartActions';
@@ -25,7 +27,7 @@ class ProductDetail extends Component {
         <div className="row">
           <div className="col-md-6 thumbnail">
             <img className="img-thumbnail"
-              src={product.photo}
+              src={API_SERVER + product.photo}
               alt={product.name}
             />
           </div>
