@@ -4,10 +4,12 @@
 
 import axios from 'axios';
 
+const API_SERVER = process.env.API_SERVER;
+
 // Action: getCategories
 // Description: Fetch all categories from CondorMKT API.
 export const getCategories = () => async dispatch => {  
-  axios.get("/api/categories")
+  axios.get(`${SERVER_API}/api/categories`)
     .then((response) => {
       dispatch({
         type: "GET_CATEGORIES",
