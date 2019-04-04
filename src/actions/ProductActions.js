@@ -9,7 +9,7 @@ import { API_SERVER } from '../config';
 // Action: getProducts
 // Description: Get all products from CondorMKT API.
 export const getProducts = () => async dispatch => {
-  axios.get(`${API_SERVER}/api/products`)
+  axios.get(`${API_SERVER}api/products`)
     .then(response => {
       dispatch({
         type: "GET_PRODUCTS",
