@@ -2,10 +2,6 @@
 
 A little web app for create your own MarketPlace (like Amazon) - App client.
 
-## Demo
-
-https://condormkt-app.herokuapp.com/
-
 ## Requirements
 
 * Node.js
@@ -13,10 +9,16 @@ https://condormkt-app.herokuapp.com/
 
 ## Instructions
 
+### Option 1: Local environment
+
 1. npm install
 2. npm start
 
 * Default port: 3000
+
+### Option 2: Online environment
+
+https://condormkt-app.herokuapp.com/
 
 ## Used Technologies
 
