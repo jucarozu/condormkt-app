@@ -5,7 +5,7 @@
 import axios from 'axios';
 
 //const API_SERVER = process.env.API_SERVER;
-import { API_SERVER } from '../../config';
+import { API_SERVER } from '../config';
 
 // Action: getCategories
 // Description: Fetch all categories from CondorMKT API.
