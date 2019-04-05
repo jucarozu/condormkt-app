@@ -42,7 +42,6 @@ https://condormkt-app.herokuapp.com/
 * react - User interfaces
 * react-dom - Associated with React
 * react-redux - Associated with React
-* react-router - Associated with React
 * react-router-dom - Associated with React
 * react-router-redux - Associated with React and Redux
 * react-scripts - Generated for Create React App
