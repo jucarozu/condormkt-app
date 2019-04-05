@@ -1,6 +1,6 @@
-# CondorMKT - App Client
+# CondorMKT - Client App
 
-A little web app for create your own MarketPlace (like Amazon) - App Client.
+A little web app for create your own MarketPlace (like Amazon) - Client App.
 
 ## Requirements
 
