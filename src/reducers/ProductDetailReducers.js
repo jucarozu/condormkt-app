@@ -9,10 +9,8 @@ const initialState = {
 };
 
 // Set the state of the data associated to the ProductDetail page depending of the dispatched action.
-export default (state = initialState, action) => {
-  
-  switch (action.type) {
-    
+export default (state = initialState, action) => {  
+  switch (action.type) {    
     case "GET_PRODUCT_BY_ID":
       return(
         R.mergeRight(
@@ -22,7 +20,6 @@ export default (state = initialState, action) => {
           }
         )
       );
-
     default:
       return state;
   }

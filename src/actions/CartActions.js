@@ -9,7 +9,7 @@ import { API_SERVER } from '../config';
 
 // Action: getCart
 // Description: Get cart from CondorMKT API.
-export const getCart = () => async dispatch => {  
+export const getCart = () => dispatch => {  
   axios.get(`${API_SERVER}/api/cart`)
     .then(response => {
       dispatch({
@@ -27,7 +27,7 @@ export const getCart = () => async dispatch => {
 
 // Action: addProductToCart
 // Description: Add an item to the cart.
-export const addProductToCart = cart => async dispatch => {
+export const addProductToCart = cart => dispatch => {
   axios.post(`${API_SERVER}/api/cart`, cart)
     .then(response => {
       dispatch({
@@ -45,7 +45,7 @@ export const addProductToCart = cart => async dispatch => {
 
 // Action: updateCart
 // Description: Update data of one product of the cart.
-export const updateCart = (_id, unit, cartUpdate) => async dispatch => {
+export const updateCart = (_id, unit, cartUpdate) => dispatch => {
   // Determine index of product to update.
   const indexToUpdate = cartUpdate.findIndex(item => {
     return item.product._id === _id;
@@ -71,7 +71,7 @@ export const updateCart = (_id, unit, cartUpdate) => async dispatch => {
 
 // Action: removeProductFromCart
 // Description: Remove an item of the cart.
-export const removeProductFromCart = (_id, cartRemove) => async dispatch => {    
+export const removeProductFromCart = (_id, cartRemove) => dispatch => {    
   // Determine index of product to remove.
   const indexToRemove = cartRemove.findIndex(item => {
     return item.product._id === _id;
@@ -97,7 +97,7 @@ export const removeProductFromCart = (_id, cartRemove) => async dispatch => {
 
 // Action: cleanCart
 // Description: Returns the cart to the initial state.
-export const cleanCart = () => async dispatch => {
+export const cleanCart = () => dispatch => {
   axios.post(`${API_SERVER}/api/cart`, [])
     .then(response => {
       dispatch({

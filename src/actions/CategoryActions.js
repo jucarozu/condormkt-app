@@ -8,7 +8,7 @@ import { API_SERVER } from '../config';
 
 // Action: getCategories
 // Description: Fetch all categories from CondorMKT API.
-export const getCategories = () => async dispatch => {
+export const getCategories = () => dispatch => {
   axios.get(`${API_SERVER}/api/categories`)
     .then((response) => {
       dispatch({
@@ -19,7 +19,7 @@ export const getCategories = () => async dispatch => {
     .catch((error) => {
       dispatch({
         type: "GET_CATEGORIES_ERROR",
-        payload: error
+        payload: error.response.data
       });
     });
 }

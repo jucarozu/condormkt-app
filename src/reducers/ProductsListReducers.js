@@ -10,10 +10,8 @@ const initialState = {
 };
 
 // Set the state of the data associated to the ProductsList page depending of the dispatched action.
-export default (state = initialState, action) => {
-  
-  switch (action.type) {
-    
+export default (state = initialState, action) => {  
+  switch (action.type) {    
     case "GET_PRODUCTS":
       return(
         R.mergeRight(
@@ -23,7 +21,6 @@ export default (state = initialState, action) => {
           }
         )
       );
-
     case "SEARCH_PRODUCTS":
       return(
         R.mergeRight(
@@ -33,7 +30,6 @@ export default (state = initialState, action) => {
           }
         )
       );
-
     default:
       return state;
   }
