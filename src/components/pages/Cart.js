@@ -31,7 +31,8 @@ class Cart extends Component {
       // Decrement product quantity.
       this.props.updateCart(_id, -1, this.props.cart);
     } else {
-      return;
+      // Remove a product of the cart.
+      this.onRemoveProductFromCart(_id);
     }
   }
 
