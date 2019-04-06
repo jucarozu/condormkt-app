@@ -11,7 +11,7 @@ A little web app for create your own MarketPlace (like Amazon) - Client App.
 
 ### Option 1: Local environment
 
-1. In src/config.js file, replace value of the API_SERVER const with 'http://localhost:5000/'
+1. In src/config.js file, replace value of the API_SERVER const with 'http://localhost:5000'
 2. npm install
 3. npm start
 
